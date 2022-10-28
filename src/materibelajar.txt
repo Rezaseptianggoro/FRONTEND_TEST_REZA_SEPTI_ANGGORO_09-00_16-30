@@ -1,0 +1,55 @@
+ //tambahkan variabel 
+ const title = "welcome to my app";
+ // buat array untuk menambahkan state hook 
+ 
+ const [judul, setjudul] = useState("judul");
+ // buat fungsi untuk state hook 
+ 
+ const gantijudul = () => {
+   setjudul("judul telah diganti ");
+ }
+ // membuat loopng data 
+ 
+  // data untuk proops
+  const [products, setproducts] = useState([
+    {id: 1, namaproduk: 'produk1', price: 24},
+    {id: 2, namaproduk: 'produk2', price: 25},
+    {id: 3, namaproduk: 'produk3', price: 26},
+    {id: 4, namaproduk: 'produk4', price: 27}
+  ]);
+
+  const age = 10;
+  const link ="https://www.google.com";
+  // buat event click 
+  // buat function dengan syntax ' () => '
+  const click = () => {
+    console.log("telah di klik");
+  }
+  // event click 2 
+  const click2 = (name) => {
+    console.log("hello " + name);
+  
+  }
+  <Header/>
+        <Home/>
+      
+            <h1>{title} hello from dynamic values</h1>
+            <h1>{age + 12}</h1>
+            <h1>{judul}</h1>
+            <a href={link}>go to link</a>
+            <button onClick={click}>click me </button>
+            <button onClick={ () => click2("reza") }>click 2</button>
+            <button onClick={gantijudul}>ganti judul</button>
+            <h3> ini adalah list data menggunakan looping list</h3>
+            <ul>
+              { produk.map( (produks) => (
+                // menggunakan jsx syntak 
+                <li key={produks.id}> {produks.namaproduk} - {produks.price}</li>
+                )
+              )}
+
+            </ul>
+            <h1> ini adalah list data menggunakan props</h1>
+            <Productlist products={products} deleteProduct={deleteProduct}/>
+            <button onClick={ () => setnama('anggoro')}>change name </button>
+            <p>{nama}</p>

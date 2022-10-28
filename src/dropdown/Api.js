@@ -1,0 +1,1 @@
+export const API_URL = "http://dev.farizdotid.com/api/daerahindonesia/provinsi";
